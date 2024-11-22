@@ -10,10 +10,28 @@ class BoardsController < ApplicationController
   def create
     @board = current_user.boards.build(board_params)
     if @board.save
-      redirect_to boards_path, success: "投稿を作成しました"
+      redirect_to boards_path
     else
-      flash.now[:danger] = "投稿を作成出来ませんでした"
       render :new, status: :unprocessable_entity
+    end
+
+    def edit
+      @board = current_user.boards.find(params[:id])
+    end
+
+    def update
+      @board = current_user.boards.find(params[:id])
+      if @board.update(board_params)
+        redirect_to board_path(@board)
+      else
+        render :edit, status: :unprocessable_entity
+      end
+    end
+
+    def destroy
+      @board = current_user.boards.find(params[:id])
+      board.destroy!
+      redirect_to boards_path
     end
   end
 
