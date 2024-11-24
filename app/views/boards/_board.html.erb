@@ -5,16 +5,18 @@
       <div class="card-body">
         <div class="d-flex">
           <h4 class="card-title">
-            <%= link_to board.title, '#' %>
+            <%= link_to board.title, board_path(board) %>
           </h4>
-          <div class='ms-auto'>
-            <%= link_to '#', id: 'button-edit-#{board.id}' do %>
-              <i class="bi bi-pencil-fill"></i>
-            <% end %>
-            <%= link_to '#', id: 'button-delete-#{board.id}', method: :delete, data: {confirm: ''} do %>
-              <i class="bi bi-trash-fill"></i>
-            <% end %>
-          </div>
+          <% if current_user.own?(board) %>
+            <div class='ms-auto'>
+              <%= link_to edit_board_path(board), id: 'button-edit-#{board.id}' do %>
+                <i class="bi bi-pencil-fill"></i>
+              <% end %>
+              <%= link_to board_path(board), id: 'button-delete-#{board.id}', data: { method: false, turbo_confirm: "本当に削除しますか？"} do %>
+                <i class="bi bi-trash-fill"></i>
+              <% end %>
+            </div>
+          <% end %>
         </div>
         <ul class="list-inline">
           <li><i class="bi bi-person"></i><%= board.user.full_name %></li>

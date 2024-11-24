@@ -1,8 +1,8 @@
 <div class="container">
   <div class="row">
     <div class="col-lg-8 offset-lg-2">
-      <h1>New Post</h1>
-      <%= form_with model: @board, class: "new_board" do |f| %>
+      <h1>Edit Post</h1>
+      <%= form_with model: @board, data: {turbo: false} do |f| %>
         <div class="mb-3">
           <%= f.label :title %>
           <%= f.text_field :title, class: "form-control" %>
@@ -16,7 +16,7 @@
           <%= f.file_field :board_image, class: "form-control", accept: 'image/*' %>
           <%= f.hidden_field :board_image_cache %>
         </div>
-        <%= f.submit "Create", class: "btn btn-primary" %>
+        <%= f.submit "Update", class: "btn btn-primary" %>
       <% end %>
     </div>
   </div>
