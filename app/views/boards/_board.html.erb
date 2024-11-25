@@ -16,13 +16,15 @@
                 <i class="bi bi-trash-fill"></i>
               <% end %>
             </div>
+          <% else %>
+            <%= render 'bookmark_buttons', { board: board } %>
           <% end %>
         </div>
         <ul class="list-inline">
           <li><i class="bi bi-person"></i><%= board.user.full_name %></li>
           <li><i class="bi bi-calendar"></i><%= l board.created_at, format: :short %></li>
         </ul>
-        <p class="card-text">本文</p>
+        <p class="card-text"><%= board.body %></p>
       </div>
     </div>
   </div>
