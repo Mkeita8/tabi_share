@@ -6,4 +6,12 @@ class Board < ApplicationRecord
   has_many :bookmarks, dependent: :destroy
 
   mount_uploader :board_image, BoardImageUploader
+
+  def self.ransackable_attributes(auth_objects = nil)
+    %w[title body]
+  end
+
+  def self.ransackable_associations(auth_objects = nil)
+    []
+  end
 end

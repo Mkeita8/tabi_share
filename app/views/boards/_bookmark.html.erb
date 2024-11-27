@@ -1,3 +1,6 @@
-<%= link_to bookmarks_path(board_id: board.id), id: "bookmark-button-for-board-#{board.id}", data: { turb: false, method: :post } do %>
+<%= link_to bookmarks_path(board_id: board.id), 
+            id: "bookmark-button-for-board-#{board.id}", 
+            method: :post,
+            data: { turbo: false } do %>
   <i class="bi bi-star"></i>
 <% end %>
