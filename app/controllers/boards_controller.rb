@@ -4,8 +4,8 @@ class BoardsController < ApplicationController
   end
 
   def index
-    @boards = Board.includes(:user).order(created_at: :desc)
-    
+    @q = Board.ransack(params[:q])
+    @boards = @q.result(distinct: true).includes(:user).order(created_at: :desc)
   end
 
   def create
@@ -36,12 +36,13 @@ class BoardsController < ApplicationController
 
   def destroy
     @board = current_user.boards.find(params[:id])
-    board.destroy!
+    @board.destroy!
     redirect_to boards_path
   end
 
   def bookmarks
-    @bookmark_boards = current_user.bookmark_boards.includes(:user).order(created_at: :desc)
+    @q = current_user.bookmark_boards.ransack(params[:q])
+    @bookmark_boards = @q.result(distinct: true).includes(:user).order(created_at: :desc)
   end
 
   private
