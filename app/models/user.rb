@@ -12,6 +12,7 @@ class User < ApplicationRecord
   has_many :bookmarks, dependent: :destroy
   has_many :bookmark_boards, through: :bookmarks, source: :board
 
+
   def own?(object)
     id == object.user_id
   end

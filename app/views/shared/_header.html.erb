@@ -23,7 +23,7 @@
           <div class='dropdown-menu dropdown-menu-end'>
             <div class='dropdown-item'><%= current_user.full_name %></div>
             <div class='dropdown-divider'></div>
-            <%= link_to 'プロフィール', '#', class: 'dropdown-item' %>
+            <%= link_to 'プロフィール', profile_path, class: 'dropdown-item' %>
             <%= link_to 'ブックマーク一覧', bookmarks_boards_path, class: 'dropdown-item' %>
             <%= button_to 'ログアウト', logout_path, data: {turbo: false}, class: 'dropdown-item', method: :delete %>
           </div>
