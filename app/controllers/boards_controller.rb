@@ -37,7 +37,7 @@ class BoardsController < ApplicationController
   def destroy
     @board = current_user.boards.find(params[:id])
     @board.destroy!
-    redirect_to boards_path
+    redirect_to boards_path, status: :see_other
   end
 
   def bookmarks
