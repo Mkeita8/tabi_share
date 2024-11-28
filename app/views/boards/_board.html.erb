@@ -1,4 +1,4 @@
-<div class="col-sm-10 col-lg-5 mb-5 mx-auto">
+<div class="col-sm-10 col-lg-4 mb-5 mx-auto">
   <div id="board-id-<%= board.id %>">
     <div class="card">
       <%= image_tag board.board_image_url, class: "card-img-top" %>
@@ -12,7 +12,7 @@
               <%= link_to edit_board_path(board), id: 'button-edit-#{board.id}' do %>
                 <i class="bi bi-pencil-fill"></i>
               <% end %>
-              <%= link_to board_path(board), id: 'button-delete-#{board.id}', data: { method: false, turbo_confirm: "本当に削除しますか？"} do %>
+              <%= link_to board_path(board), id: 'button-delete-#{board.id}', data: {turdo_method: :delete, turbo_confirm: "本当に削除しますか？"} do %>
                 <i class="bi bi-trash-fill"></i>
               <% end %>
             </div>

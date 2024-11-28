@@ -5,7 +5,7 @@ class BookmarksController < ApplicationController
   end
 
   def destroy
-    @board = current_user.bookmarks.find(parmas[:id]).board
+    @board = current_user.bookmarks.find(params[:id]).board
     current_user.unbookmark(@board)
   end
 end
