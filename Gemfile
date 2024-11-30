@@ -29,6 +29,10 @@ gem "carrierwave", "~> 3.0"
 
 gem 'ransack'
 
+gem "kaminari"
+
+gem "bootstrap5-kaminari-views"
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: %i[ windows jruby ]
 
