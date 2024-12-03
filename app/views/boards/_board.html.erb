@@ -7,9 +7,7 @@
           <h4 class="card-title">
             <%= link_to board.title, board_path(board) %>
           </h4>
-          <% unless current_user.own?(board) %>
-            <%= render 'bookmark_buttons', { board: board } %>
-          <% end %>
+          <%= render 'bookmark_buttons', { board: board } %>
         </div>
         <ul class="list-inline">
           <li><i class="bi bi-person"></i><%= board.user.full_name %></li>
