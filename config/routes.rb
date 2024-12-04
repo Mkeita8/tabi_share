@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   get "profiles/edit"
   get "profiles/update"
   root 'static_pages#top'
-  resources :users, only: %i[new create destroy]
+  resources :users, only: %i[new create destroy edit]
   resources :boards, only: %i[index new create show edit destroy update] do
     collection do
       get :bookmarks
