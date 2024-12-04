@@ -1,12 +1,10 @@
-<div class="container home-sections d-flex flex-row justify-content-center
-  align-items-center"
->
+<div class="container home-sections d-flex flex-row justify-content-center align-items-center">
   <div class="login-section pt-3">
     <div class="card text-center pt-5 mx-auto" style="width: 23rem;">
       <h1>Sign up</h1>
 
       <div class="card-body">
-<%= form_with model: @user, data: {turbo: false} do |f| %>
+        <%= form_with model: @user, data: {turbo: false} do |f| %>
           <div class="mb-3 mt-4">
             <%= f.text_field :full_name, class: "form-control", placeholder: "お名前" %>
           </div>
@@ -26,7 +24,7 @@
           <div class="mb-3">
             <%= f.password_field :password_confirmation, class: "form-control", placeholder: "パスワード確認" %>
           </div>
-
+          
           <%= f.submit "サインアップ", class: "btn btn-primary w-100" %>
         <% end %>
 
