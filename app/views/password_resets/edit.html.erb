@@ -1,0 +1,27 @@
+<div class="container home-sections d-flex flex-row justify-content-center align-items-center">
+  <div class="login-section pt-3">
+    <div class="card text-center pt-5 mx-auto" style="width: 23rem;">
+      <h1>Password reset</h1>
+
+      <div class="card-body">
+        <%= form_with model: @user, url: password_reset_path(@token), method: :patch do |f| %>
+        <%= render 'shared/error_messages', object: f.object %>
+          <div class="mb-3">
+            <%= f.label :"現在のメールアドレス：", class: "form-label" %>
+            <%= @user.email %>
+          </div>
+
+          <div class="mb-3">
+            <%= f.password_field :password, class: "form-control", placeholder: "パスワード" %>
+          </div>
+
+          <div class="mb-3">
+            <%= f.password_field :password_confirmation, class: "form-control", placeholder: "パスワード確認" %>
+          </div>
+
+          <%= f.submit "更新", class: "btn btn-primary w-100" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
