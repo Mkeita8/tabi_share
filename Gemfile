@@ -33,6 +33,8 @@ gem "kaminari"
 
 gem "bootstrap5-kaminari-views"
 
+gem "config"
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: %i[ windows jruby ]
 
@@ -67,6 +69,8 @@ end
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
+
+  gem 'letter_opener_web', '~> 3.0'
 end
 
 group :test do

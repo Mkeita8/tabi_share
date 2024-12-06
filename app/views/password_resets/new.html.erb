@@ -1,0 +1,16 @@
+<div class="container home-sections d-flex flex-row justify-content-center align-items-center">
+  <div class="login-section pt-3">
+    <div class="card text-center pt-5 mx-auto" style="width: 40rem;">
+      <h1>Reset request</h1>
+
+      <div class="card-body">
+        <%= form_with url: password_resets_path do |f| %>
+          <div class="mb-3">
+            <%= f.email_field :email, class: "form-control", placeholder: "メールアドレス" %>
+          </div>
+          <%= f.submit "送信", class: "btn btn-primary" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
