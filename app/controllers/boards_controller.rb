@@ -45,6 +45,13 @@ class BoardsController < ApplicationController
     @bookmark_boards = @q.result(distinct: true).includes(:user).order(created_at: :desc).page(params[:page]).per(9)
   end
 
+  def hashtag
+    @user = current_user
+    @tag = Hashtag.find_by(hashname: params[:name])
+    @boards = @tag.boards
+  end
+
+
   private
 
   def board_params

@@ -20,4 +20,5 @@ Rails.application.routes.draw do
   post 'login', to: 'user_sessions#create'
   delete 'logout', to: 'user_sessions#destroy'
   get "up" => "rails/health#show", as: :rails_health_check
+  get "/board/hashtag/:name", to: "boards#hashtag"
 end

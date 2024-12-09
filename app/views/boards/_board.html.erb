@@ -13,7 +13,7 @@
           <li><i class="bi bi-person"></i><%= board.user.full_name %></li>
           <li><i class="bi bi-calendar"></i><%= l board.created_at, format: :short %></li>
         </ul>
-        <p class="card-text"><%= board.body %></p>
+        <%= render_with_hashtags(board.body) %>
       </div>
     </div>
   </div>
