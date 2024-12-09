@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2024_12_04_031340) do
+ActiveRecord::Schema[8.0].define(version: 2024_12_07_055357) do
+  create_table "board_hashtag_relations", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.bigint "board_id"
+    t.bigint "hashtag_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["board_id"], name: "index_board_hashtag_relations_on_board_id"
+    t.index ["hashtag_id"], name: "index_board_hashtag_relations_on_hashtag_id"
+  end
+
   create_table "boards", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "title", null: false
     t.text "body", null: false
@@ -31,6 +40,13 @@ ActiveRecord::Schema[8.0].define(version: 2024_12_04_031340) do
     t.index ["user_id"], name: "index_bookmarks_on_user_id"
   end
 
+  create_table "hashtags", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.string "hashname"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["hashname"], name: "index_hashtags_on_hashname", unique: true
+  end
+
   create_table "users", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "email", null: false
     t.string "crypted_password"
@@ -48,6 +64,8 @@ ActiveRecord::Schema[8.0].define(version: 2024_12_04_031340) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "board_hashtag_relations", "boards"
+  add_foreign_key "board_hashtag_relations", "hashtags"
   add_foreign_key "boards", "users"
   add_foreign_key "bookmarks", "boards"
   add_foreign_key "bookmarks", "users"
