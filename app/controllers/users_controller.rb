@@ -8,9 +8,11 @@ class UsersController < ApplicationController
     def create
       @user = User.new(user_params)
       if @user.save
-        auto_login(@user)
+        session[:user_id] = @user.id
+        flash[:success] = "ユーザーを登録しました"
         redirect_to boards_path
       else
+        flash.now[:danger] = "ユーザー登録に失敗しました"
         render :new
       end
     end
@@ -18,6 +20,7 @@ class UsersController < ApplicationController
     def destroy
       @user = User.find(params[:id])
       @user.destroy
+      flash[:success] = "アカウントを削除しました"
       redirect_to root_path
     end
 

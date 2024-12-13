@@ -6,8 +6,10 @@ class ProfilesController < ApplicationController
 
   def update
     if @user.update(user_params)
+      flash[:success] = "変更しました"
       redirect_to profile_path
     else
+      flash.now[:danger] = "変更できませんでした"
       render :edit, status: :unprocessable_entity
     end
   end
