@@ -11,8 +11,10 @@ class BoardsController < ApplicationController
   def create
     @board = current_user.boards.build(board_params)
     if @board.save
+      flash[:success] = "投稿しました"
       redirect_to boards_path
     else
+      flash.now[:danger] = "投稿できませんでした"
       render :new, status: :unprocessable_entity
     end
   end

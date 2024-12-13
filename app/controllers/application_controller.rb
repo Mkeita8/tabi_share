@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
   before_action :require_login
   before_action :set_search
+  add_flash_types :success, :danger
 
   def set_search
     @q = Board.ransack(params[:q])
