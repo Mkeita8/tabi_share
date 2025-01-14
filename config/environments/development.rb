@@ -35,13 +35,13 @@ Rails.application.configure do
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    address:              'smtp.gmail.com',
+    address: 'smtp.gmail.com',
+    port: 587,
+    domain: 'gmail.com',
+    user_name: ENV['tabishare00@gmail.com'],
+    password: ENV['sqqb udol rtfy pbdx'],
+    authentication: 'plain'
     enable_starttls_auto: true,
-    port:                 587,
-    domain:               'gmail.com',
-    user_name:            'tabishare00@gmail.com',
-    password:             'sqqb udol rtfy pbdx',
-    authentication:       :plain
   }
 
   config.action_mailer.perform_deliveries = true
