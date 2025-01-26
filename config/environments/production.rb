@@ -98,6 +98,6 @@ Rails.application.configure do
     user_name: ENV['tabishare00@gmail.com'],
     password: ENV['sqqb udol rtfy pbdx'],
     authentication: 'plain',
-    enable_starttls_auto: true,
+    enable_starttls_auto: true
   }
 end

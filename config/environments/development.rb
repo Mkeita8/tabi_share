@@ -40,8 +40,8 @@ Rails.application.configure do
     domain: 'gmail.com',
     user_name: ENV['tabishare00@gmail.com'],
     password: ENV['sqqb udol rtfy pbdx'],
-    authentication: 'plain'
-    enable_starttls_auto: true,
+    authentication: 'plain',
+    enable_starttls_auto: true
   }
 
   config.action_mailer.perform_deliveries = true
