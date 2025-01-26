@@ -13,7 +13,6 @@
         </div>
         <ul class="list-inline">
           <li><i class="bi bi-person"></i><%= board.user.full_name %></li>
-          <li><i class="bi bi-calendar"></i><%= l board.created_at, format: :short %></li>
         </ul>
         <%= render_with_hashtags(board.body) %>
       </div>
