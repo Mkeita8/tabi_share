@@ -5,7 +5,7 @@
         <% if @bookmark_boards.present? %>
           <%= render @bookmark_boards %>
         <% else %>
-          <p>No bookmarked posts</p>
+          <p>お気に入りした投稿はありません。</p>
         <% end %>
       </div>
       <%= paginate @bookmark_boards, theme: 'bootstrap-5' %>

@@ -14,7 +14,7 @@
       <ul class="navbar-nav ms-auto main-nav align-items-center">
         <li class="nav-item dropdown dropdown-slide">
           <%= link_to "#", class: "nav-link", data: { bs_toggle: "dropdown" }, aria: { haspopup: "true", expanded: "false" }, id: "header-profile" do %>
-            <%= image_tag current_user.avatar_url, class: "rounded-circle mr15", width: "50", height: "50" %>
+            <%= image_tag current_user.avatar_url, class: "rounded-circle mr15", style: "width: 50px; height: 50px; object-fit: cover;" %>
           <% end %>
           <div class="dropdown-menu dropdown-menu-end">
             <%= link_to current_user.full_name, profile_path, class: 'dropdown-item' %>
