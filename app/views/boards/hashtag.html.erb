@@ -1,7 +1,7 @@
-<div class="container pt-3">
+<div class="col-sm-10 col-lg-4 mb-5 mx-auto">
   <div class="row">
     <div class="col-12">
-      <h2>ハッシュタグ: #<%= @tag&.hashname %></h2>
+      <h2>#<%= @tag&.hashname %></h2>
       <div class="row">
         <% @boards.each do |board| %>
           <li>
@@ -14,4 +14,3 @@
     </div>
   </div>
 </div>
-#未完成

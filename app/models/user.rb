@@ -29,5 +29,9 @@ class User < ApplicationRecord
   def bookmark?(board)
     bookmark_boards.include?(board)
   end
+
+  def avatar_url
+    avatar.url || "default_image.png"
+  end
 end
 
