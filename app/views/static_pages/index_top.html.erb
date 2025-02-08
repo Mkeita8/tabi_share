@@ -1,0 +1,14 @@
+<div class="container pt-3">
+  <div class="row">
+    <div class="col-12">
+      <div class="row">
+        <% if @boards.present? %>
+          <%= render @boards %>
+        <% else %>
+          <div class="mb-3">No postings</div>
+        <% end %>
+      </div>
+      <%= paginate @boards, theme: 'bootstrap-5' %>
+    </div>
+  </div>
+</div>
