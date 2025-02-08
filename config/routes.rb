@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get "profiles/show"
   get "profiles/edit"
   get "profiles/update"
-  root 'static_pages#top'
+  root 'static_pages#board_top'
   resources :users, only: %i[new create destroy edit]
   resources :boards, only: %i[index new create show edit destroy update] do
     collection do
@@ -21,4 +21,5 @@ Rails.application.routes.draw do
   delete 'logout', to: 'user_sessions#destroy'
   get "up" => "rails/health#show", as: :rails_health_check
   get "/board/hashtag/:name", to: "boards#hashtag"
+  get "index_top", to: "static_pages#index_top", as: :index_top
 end

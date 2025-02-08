@@ -1,26 +1,7 @@
-.top-wrapper {
-    background-image: url('top.jpg');
-    background-size:cover;
-    height: calc(100vh - 134px);
-    position: relative;
-    background-position: center;
-  
-    .top-inner-text {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 100%;
-      text-align: center;
-      font-size: 3rem;
-      color: white;
-  
-      @media screen and (max-width: 767px) {
-        font-size: 2rem;
-      }
-    }
-  }
-  
+.header {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
 .card-img-top {
   width: 100%;
   height: 400px;
@@ -30,7 +11,10 @@
 .card-img-top-show {
   width: 100%;
   height: 400px;
-  object-fit: cover;
+  object-fit
+  : cover;
 }
 
-
+. footer {
+  color: cornflowerblue;
+}
