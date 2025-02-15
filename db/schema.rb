@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2024_12_07_055357) do
+ActiveRecord::Schema[8.0].define(version: 2025_02_12_114512) do
   create_table "board_hashtag_relations", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.bigint "board_id"
     t.bigint "hashtag_id"
@@ -27,6 +27,9 @@ ActiveRecord::Schema[8.0].define(version: 2024_12_07_055357) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "board_image"
+    t.float "latitude"
+    t.float "longitude"
+    t.string "address"
     t.index ["user_id"], name: "index_boards_on_user_id"
   end
 
@@ -61,7 +64,7 @@ ActiveRecord::Schema[8.0].define(version: 2024_12_07_055357) do
     t.datetime "reset_password_email_sent_at"
     t.integer "access_count_to_reset_password_page", default: 0
     t.index ["email"], name: "index_users_on_email", unique: true
-    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token"
   end
 
   add_foreign_key "board_hashtag_relations", "boards"

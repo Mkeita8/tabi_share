@@ -1,20 +1,17 @@
 Rails.application.routes.draw do
-  get "password_resets/create"
-  get "password_resets/edit"
-  get "password_resets/update"
-  get "profiles/show"
-  get "profiles/edit"
-  get "profiles/update"
-  root 'static_pages#board_top'
+  get "maps/index"
+  resource :password_resets, only: %i[create edit update]
+  resource :profile, only: %i[show edit update]
+  resources :bookmarks, only: %i[create destroy]
+  resource :profile, only: %i[show edit update]
+  resources :password_resets, only: %i[new create edit update]
   resources :users, only: %i[new create destroy edit]
   resources :boards, only: %i[index new create show edit destroy update] do
     collection do
       get :bookmarks
     end
   end
-  resources :bookmarks, only: %i[create destroy]
-  resource :profile, only: %i[show edit update]
-  resources :password_resets, only: %i[new create edit update]
+
   mount LetterOpenerWeb::Engine, at: "/letter_opener" if Rails.env.development?
   get 'login', to: 'user_sessions#new'
   post 'login', to: 'user_sessions#create'
@@ -22,4 +19,5 @@ Rails.application.routes.draw do
   get "up" => "rails/health#show", as: :rails_health_check
   get "/board/hashtag/:name", to: "boards#hashtag"
   get "index_top", to: "static_pages#index_top", as: :index_top
+  root 'static_pages#board_top'
 end

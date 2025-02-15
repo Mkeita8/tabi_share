@@ -1,0 +1,23 @@
+<div class="map">
+  <div id="map" data-latitude="<%= board.latitude %>" date-longitude="<%= board.longitude %>">
+  </div>
+</div>
+
+<script type="text/javascipt">
+  function initMap() {
+    var lat = parseFloat(document.getElementById('map').dataset.latitude);
+    var lng = parseFloat(document.getElementById('map').dataset.longitude);
+
+    let map = new google.maps.Map(document.getElementById('map'), {
+        center: { lat: lat, lng: lng },
+        zoom: 15
+    });
+
+    var marker = new google.maps.Marker({
+        position: {lat: lat, lng: lng},
+        map; map
+    });
+  }
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['API_KEY'] %>&callback=initMap" async defer></script>

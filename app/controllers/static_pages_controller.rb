@@ -3,6 +3,7 @@ class StaticPagesController < ApplicationController
   
   def board_top
     @boards = Board.all
+    @boards = Board.includes(:user).order(created_at: :desc).page(params[:page])
   end
 
   def index_top
