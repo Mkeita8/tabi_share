@@ -10,6 +10,9 @@ class Board < ApplicationRecord
 
   mount_uploader :board_image, BoardImageUploader
 
+  geocoded_by :address
+  after_validation :geocode, if: :address_changed?
+
   def self.ransackable_attributes(auth_objects = nil)
     %w[title body]
   end

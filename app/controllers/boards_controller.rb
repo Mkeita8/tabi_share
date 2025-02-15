@@ -38,6 +38,7 @@ class BoardsController < ApplicationController
 
   def destroy
     @board = current_user.boards.find(params[:id])
+    @board.board_hashtag_relations.destroy_all
     @board.destroy!
     redirect_to boards_path, status: :see_other
   end
@@ -57,6 +58,6 @@ class BoardsController < ApplicationController
   private
 
   def board_params
-    params.require(:board).permit(:title, :body, :board_image, :board_image_cache)
+    params.require(:board).permit(:title, :body, :address, :board_image, :board_image_cache)
   end
 end
