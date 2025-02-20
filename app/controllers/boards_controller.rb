@@ -1,4 +1,5 @@
 class BoardsController < ApplicationController
+  before_action :set_user, only: %i[edit update destroy]
   def new
     @board = Board.new
   end
@@ -38,7 +39,6 @@ class BoardsController < ApplicationController
 
   def destroy
     @board = current_user.boards.find(params[:id])
-    @board.board_hashtag_relations.destroy_all
     @board.destroy!
     redirect_to boards_path, status: :see_other
   end
@@ -54,10 +54,9 @@ class BoardsController < ApplicationController
     @boards = @tag.boards
   end
 
-
   private
 
   def board_params
-    params.require(:board).permit(:title, :body, :address, :board_image, :board_image_cache)
+    params.require(:board).permit(:title, :body, :board_image, :board_image_cache)
   end
 end
