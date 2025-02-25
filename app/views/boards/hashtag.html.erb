@@ -1,16 +1,13 @@
-<div class="col-sm-10 col-lg-4 mb-5 mx-auto">
+<div class="container pt-3">
   <div class="row">
     <div class="col-12">
-      <h2>#<%= @tag&.hashname %></h2>
+      <h1>#<%= @tag&.hashname %></h1>
       <div class="row">
-        <% @boards.each do |board| %>
-          <li>
-            <%= link_to board_path(board.id) do %>
-              <%= image_tag board.board_image_url, class: "card-img-top w-100 h-100 object-fit-cover" %>
-            <% end %>
-          </li>
-        <% end %>
-      </div>
-    </div>
+      <% if @boards.present? %>
+      <%= render @boards %>
+    <% else %>
+      <div class="mb-3">No postings</div>
+    <% end %>
   </div>
+  <%= paginate @boards, theme: 'bootstrap-5' %>
 </div>

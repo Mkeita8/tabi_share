@@ -1,5 +1,6 @@
 class BoardsController < ApplicationController
   before_action :set_user, only: %i[edit update destroy]
+  skip_before_action :require_login, only: %i[show]
   def new
     @board = Board.new
   end
@@ -51,12 +52,20 @@ class BoardsController < ApplicationController
   def hashtag
     @user = current_user
     @tag = Hashtag.find_by(hashname: params[:name])
-    @boards = @tag.boards
+    if @tag
+      @boards = @tag.boards.includes(:user).order(created_at: :desc).page(params[:page]).per(9)
+    else
+      @boards = Board.none
+    end
   end
 
   private
 
   def board_params
-    params.require(:board).permit(:title, :body, :board_image, :board_image_cache)
+    params.require(:board).permit(:title, :body, :address, :board_image, :board_image_cache)
+  end
+
+  def set_user
+    @user = current_user
   end
 end
