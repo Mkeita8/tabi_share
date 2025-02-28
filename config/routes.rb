@@ -19,4 +19,6 @@ Rails.application.routes.draw do
   delete "logout", to: "user_sessions#destroy"
   get "up" => "rails/health#show", as: :rails_health_check
   get "/board/hashtag/:name", to: "boards#hashtag"
+  get "terms", to: "static_pages#terms"
+  get "privacy", to: "static_pages#privacy"
 end

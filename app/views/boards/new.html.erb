@@ -5,7 +5,7 @@
       <%= form_with model: @board, class: "new_board", data: {turbo: false} do |f| %>
       <%= render "shared/error_messages", object: f.object %>
         <div class="mb-3">
-          <%= f.label :観光地名・建物名 %>
+          <%= f.label :観光地名・地域名・建物名 %>
           <%= f.text_field :title, autofocus: true, class: "form-control" %>
         </div>
         <div class="mb-3">
