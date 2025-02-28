@@ -1,6 +1,8 @@
 @import 'bootstrap/scss/bootstrap';
 @import 'bootstrap-icons/font/bootstrap-icons';
 
+@import 'top';
+
 .flash-message {
   border-radius: 5px;
   padding: 16px 24px;
@@ -17,6 +19,12 @@
     color: #930403;
     border: solid 1px #930403;
   }
+
+  .flash-error-messages {
+    background-color: #fff3cd;
+    color: #856404;
+    border: solid 1px #856404;
+  }
 }
 
-@import 'top';
+

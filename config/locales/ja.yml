@@ -1,0 +1,17 @@
+ja:
+  activerecord:
+    errors:
+      models:
+        board:
+          attributes:
+            title:
+              blank: "地名・建物名を入力してください"
+            body:
+              invalid: "ハッシュタグは半角 # から始めてください"
+            address:
+              blank: "住所を入力してください"
+            board_image:
+              blank: "写真を追加してください"
+
+  errors:
+    format: "%{message}"

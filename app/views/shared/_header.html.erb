@@ -1,7 +1,7 @@
 <header class="sticky-top header mb-4">
   <nav class="navbar navbar-expand-lg bg-white">
     <%= link_to boards_path, class: "navbar-brand" do %>
-      <%= image_tag "logo.png" %>
+      <%= image_tag asset_path("logo.png") %>
     <% end %>
     <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -14,14 +14,16 @@
       <ul class="navbar-nav ms-auto main-nav align-items-center">
         <li class="nav-item dropdown dropdown-slide">
           <%= link_to "#", class: "nav-link", data: { bs_toggle: "dropdown" }, aria: { haspopup: "true", expanded: "false" }, id: "header-profile" do %>
-            <%= image_tag current_user.avatar_url, class: "rounded-circle mr15", style: "width: 50px; height: 50px; object-fit: cover;" %>
+            <%= image_tag url_for(current_user.avatar_url), class: "rounded-circle mr15", style: "width: 50px; height: 50px; object-fit: cover;" %>
           <% end %>
           <div class="dropdown-menu dropdown-menu-end">
             <%= link_to current_user.full_name, profile_path, class: 'dropdown-item' %>
             <div class="dropdown-divider"></div>
             <%= link_to "新規投稿", new_board_path, class: "dropdown-item" %>
             <%= link_to "お気に入り", bookmarks_boards_path, class: "dropdown-item" %>
-            <%= button_to "Logout", logout_path, data: { turbo: false }, class: "dropdown-item", method: :delete %>
+            <%= button_to logout_path, data: { turbo: false }, class: "dropdown-item d-flex align-items-center", method: :delete do %>
+              <i class="bi bi-box-arrow-right me-2"></i>
+            <% end %>
           </div>
         </li>
       </ul>
