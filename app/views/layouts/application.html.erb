@@ -4,7 +4,7 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag "application" %>
+    <%= stylesheet_link_tag "application", media: "all" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
   </head>
 
@@ -14,8 +14,12 @@
     <% else %>
       <%= render "shared/before_login_header" %>
     <% end %>
-    <%= render "shared/flash_message" %> 
-    <%= yield %>
+    
+    <div class="top-screen" style="width: 100%; min-height: 650px; height: auto;">
+      <%= render "shared/flash_message" %> 
+      <%= yield %>
+    </div>
+    
     <%= render "shared/footer" %>
   </body>
 </html>

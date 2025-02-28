@@ -4,19 +4,23 @@
       <h1>投稿編集</h1>
       <%= form_with model: @board, data: {turbo: false} do |f| %>
         <div class="mb-3">
-          <%= f.label :title %>
+          <%= f.label :観光地名・建物名 %>
           <%= f.text_field :title, autofocus: true, class: "form-control" %>
         </div>
         <div class="mb-3">
-          <%= f.label :body %>
-          <%= f.text_area :body, class: "form-control", rows: "10" %>
+          <%= f.label :観光サイト・地域サイト %>
+          <%= f.text_field :official_link, class: "form-control", placeholder: "例:https://example.com" %>
         </div>
         <div class="mb-3">
-          <%= f.label :address %>
+          <%= f.label :ハッシュタグ %>
+          <%= f.text_area :body, class: "form-control", rows: "2" %>
+        </div>
+        <div class="mb-3">
+          <%= f.label :住所 %>
           <%= f.text_field :address, class: "form-control" %>
         </div>
         <div class="mb-3">
-          <%= f.label :Photo %>
+          <%= f.label :写真 %>
           <%= f.file_field :board_image, class: "form-control", accept: 'image/*' %>
           <%= f.hidden_field :board_image_cache %>
         </div>

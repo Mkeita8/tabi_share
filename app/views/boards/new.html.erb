@@ -3,17 +3,18 @@
     <div class="col-lg-8 offset-lg-2">
       <h1>新規投稿</h1>
       <%= form_with model: @board, class: "new_board", data: {turbo: false} do |f| %>
+      <%= render "shared/error_messages", object: f.object %>
         <div class="mb-3">
-          <%= f.label :地名・建物名 %>
+          <%= f.label :観光地名・建物名 %>
           <%= f.text_field :title, autofocus: true, class: "form-control" %>
         </div>
         <div class="mb-3">
-          <%= f.label :公式リンク %>
-          <%= f.text_field :body, class: "form-control", rows: "form-control" %>
+          <%= f.label :観光サイト・地域サイト %>
+          <%= f.text_field :official_link, class: "form-control", placeholder: "例:https://example.com" %>
         </div>
         <div class="mb-3">
           <%= f.label :ハッシュタグ %>
-          <%= f.text_area :body, class: "form-control", rows: "3" %>
+          <%= f.text_area :body, class: "form-control", rows: "2" %>
         </div>
         <div class="mb-3">
           <%= f.label :住所 %>

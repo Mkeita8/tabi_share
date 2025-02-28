@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_02_12_114512) do
+ActiveRecord::Schema[8.0].define(version: 2025_02_25_142014) do
   create_table "board_hashtag_relations", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.bigint "board_id"
     t.bigint "hashtag_id"
@@ -30,6 +30,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_02_12_114512) do
     t.float "latitude"
     t.float "longitude"
     t.string "address"
+    t.string "official_link"
     t.index ["user_id"], name: "index_boards_on_user_id"
   end
 

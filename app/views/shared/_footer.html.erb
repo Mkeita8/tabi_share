@@ -1,11 +1,23 @@
-<footer id="footer">
-  <div class="container">
-    <div class='row'>
-      <div class='col-sm-6 col-12'>
-        <div class='copyright'>
-          <p>Copyright © 2024. 旅シェア</p>
-        </div>
-      </div>
-    </div>
-  </div>
+<footer class="footer">
+  <table width="100%" cellpadding="0" cellspacing="0">
+    <tr>
+      <td style="text-align: center;">
+        <hr style="border: 0; border-top: 1px solid #999; margin-bottom: 10px;" />
+        <p class="copyright" style="font-size: 14px; color: #999;">
+          © 2025 
+          <a href="<%= logged_in? ? boards_path : root_path %>" style="color: #999;">
+            旅シェア
+          </a>
+        </p>
+        <ul style="list-style: none; padding: 0; margin-top: 10px;">
+          <li style="display: inline; margin-right: 10px;">
+            <a href="/terms" style="color: #999; font-size: 12px;">利用規約</a>
+          </li>
+          <li style="display: inline; margin-right: 10px;">
+            <a href="/privacy" style="color: #999; font-size: 12px;">プライバシーポリシー</a>
+          </li>
+        </ul>
+      </td>
+    </tr>
+  </table>
 </footer>

@@ -62,7 +62,7 @@ class BoardsController < ApplicationController
   private
 
   def board_params
-    params.require(:board).permit(:title, :body, :address, :board_image, :board_image_cache)
+    params.require(:board).permit(:title, :body, :address, :official_link, :board_image, :board_image_cache)
   end
 
   def set_user
