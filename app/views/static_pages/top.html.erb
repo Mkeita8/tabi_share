@@ -12,9 +12,11 @@
               </h4>
             </div>
             <ul class="list-inline">
-              <li><%= board.user.nickname %></li>
+              <li>
+                <%= image_tag url_for(board.user.avatar.url), class: "rounded-circle", style: "width:30px; height:30px; object-fit:cover;" %> 
+                <%= board.user.nickname %>
+              </li>
             </ul>
-            <%= render_with_hashtags(board.body) %>
           </div>
         </div>
       </div>
