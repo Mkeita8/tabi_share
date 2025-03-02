@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get "maps/index"
+  resources :map, only: %i[index]
   resource :password_resets, only: %i[create edit update]
   resource :profile, only: %i[show edit update]
   resources :bookmarks, only: %i[create destroy]
@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   delete "logout", to: "user_sessions#destroy"
   get "up" => "rails/health#show", as: :rails_health_check
   get "/board/hashtag/:name", to: "boards#hashtag"
+  get "maps/index"
   get "terms", to: "static_pages#terms"
   get "privacy", to: "static_pages#privacy"
 end
