@@ -7,7 +7,7 @@
           <h4 class="card-title">
             <%= link_to board.title, board_path(board) %>
           </h4>
-            <%= render 'bookmark_buttons', { board: board } %>
+            <%= render "bookmark_buttons", { board: board } %>
             <div class="line-it-button" data-lang="ja" data-type="share-b" data-env="REAL" data-url="<%= request.protocol + request.host_with_port + board_path(board) %>" data-color="default" data-size="small" data-count="false" data-ver="3" style="display: none;"></div>
             <script src="https://www.line-website.com/social-plugins/js/thirdparty/loader.min.js" async="async" defer="defer"></script>
         </div>
