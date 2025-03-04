@@ -1,8 +1,8 @@
 <%= search_form_for q, url: url, data: {turbo: false} do |f| %>
     <div class="input-group mb-1">
-      <%= f.search_field :title_or_body_cont, class: 'form-control', placeholder: '観光地名・地域名・建物名' %>
+      <%= f.search_field :title_or_body_cont, class: "form-control", placeholder: "観光地名・地域名・建物名" %>
       <div class="input-group-append">
-        <%= f.submit class: 'btn btn-primary' %>
+        <%= f.submit "SEARCH", class: "prompt-thin-3 btn btn-dark ms-1" %>
       </div>
     </div>
   <% end %>

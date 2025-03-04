@@ -1,7 +1,7 @@
 <div class="container home-sections d-flex flex-row justify-content-center align-items-center">
   <div class="login-section pt-3">
     <div class="card text-center pt-5 mx-auto" style="width: 23rem;">
-      <h1>Profiles edit</h1>
+      <h1 class="dela-gothic-one-regular">EDIT</h1>
       
       <div class="card-body">
         <%= form_with model: @user, url: profile_path, method: :put do |f| %>
@@ -33,7 +33,7 @@
             </div>
           </div>
 
-          <%= f.submit "更新", class:"btn btn-primary" %>
+          <%= f.submit "Update", class:"prompt-thin-2 btn btn-dark" %>
         <% end %>
       </div>
     </div>

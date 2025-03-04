@@ -1,7 +1,7 @@
 <div class="container home-sections d-flex flex-row justify-content-center align-items-center">
   <div class="login-section pt-3">
     <div class="card text-center pt-5 mx-auto" style="width: 23rem;">
-      <h1>プロフィール情報</h1>
+      <h1 class="dela-gothic-one-regular">PROFILE</h1>
 
       <table class="table">
         <tr>
@@ -22,11 +22,11 @@
       </tr>
       </table>
       <div class="d-flex justify-content-center align-items-center mb-3">
-        <%= link_to edit_profile_path, id: "button_edit_profile", class: "btn btn-outline-primary btn-sm me-2" do %>
-          <i class="bi bi-pencil-fill"></i> 編集
+        <%= link_to edit_profile_path, id: "button_edit_profile", class: "btn btn-dark btn-sm me-2" do %>
+          <i class="bi bi-pencil-fill"></i> EDIT
         <% end %>
-        <%= link_to user_path(current_user.id), id: "button-delete-profile", class: "btn btn-outline-danger btn-sm", data: { turbo_method: :delete, turbo_confirm: "本当に削除しますか？" } do %>
-          <i class="bi bi-trash-fill"></i> 削除
+        <%= link_to user_path(current_user.id), id: "button-delete-profile", class: "btn btn-dark btn-sm", data: { turbo_method: :delete, turbo_confirm: "本当に削除しますか？" } do %>
+          <i class="bi bi-trash-fill"></i> DELETE
         <% end %>
       </div>
     </div>

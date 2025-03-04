@@ -1,26 +1,27 @@
 <header class="sticky-top header mb-4">
-  <nav class="navbar navbar-expand-lg bg-white">
+  <nav class="navbar navbar-expand-lg">
     <%= link_to boards_path, class: "navbar-brand" do %>
-      <%= image_tag asset_path("logo.png") %>
+      <%= image_tag asset_path("tabishare.png") %>
     <% end %>
     <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="col-lg-8 offset-lg-1">
-      <%= render 'shared/search_form', q: @q, url: boards_path %>
+      <%= render "shared/search_form", q: @q, url: boards_path %>
     </div>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto main-nav align-items-center">
         <li class="nav-item dropdown dropdown-slide">
           <%= link_to "#", class: "nav-link", data: { bs_toggle: "dropdown" }, aria: { haspopup: "true", expanded: "false" }, id: "header-profile" do %>
-            <%= image_tag url_for(current_user.avatar_url), class: "rounded-circle mr15", style: "width: 50px; height: 50px; object-fit: cover;" %>
+            <%= image_tag url_for(current_user.avatar_url), class: "rounded-circle mr15 border border-dark", style: "width: 50px; height: 50px; object-fit: cover;" %>
           <% end %>
           <div class="dropdown-menu dropdown-menu-end">
-            <%= link_to current_user.full_name, profile_path, class: 'dropdown-item' %>
+            <%= link_to current_user.full_name, profile_path, class: "dropdown-item" %>
             <div class="dropdown-divider"></div>
-            <%= link_to "新規投稿", new_board_path, class: "dropdown-item" %>
-            <%= link_to "お気に入り", bookmarks_boards_path, class: "dropdown-item" %>
+            <%= link_to "New post", new_board_path, class: "dropdown-item" %>
+            <%= link_to "Post list", boards_path, class: "dropdown-item" %>
+            <%= link_to "Like", bookmarks_boards_path, class: "dropdown-item" %>
             <%= button_to logout_path, data: { turbo: false }, class: "dropdown-item d-flex align-items-center", method: :delete do %>
               <i class="bi bi-box-arrow-right me-2"></i>
             <% end %>
