@@ -28,6 +28,11 @@
   }
 }
 
+/* ボタン影 */
+.btn-shadow {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* 軽い影 */
+}
+
 /* （Signup Login）フォント */
 .prompt-thin {
   font-family: "Prompt", sans-serif;
@@ -63,16 +68,39 @@
   font-family: "Dela Gothic One", sans-serif;
   font-weight: 300;
   font-style: normal;
+  font-size: 35px;
 }
 
-/* （投稿タイトル）フォント */
+/* （投稿タイトル1）フォント */
 .dela-gothic-one-regular-2 {
   font-family: "Dela Gothic One", sans-serif;
   font-weight: 300;
   font-style: normal;
   color: black;
+  font-size: 50px;
 }
 
+/* （投稿タイトル2）フォント */
+.dela-gothic-one-regular-3 {
+  font-family: "Dela Gothic One", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  color: black;
+  font-size: 30px;
+}
+
+/* （ユーザー）フォント */
+.dela-gothic-one-regular-4 {
+  font-family: "Dela Gothic One", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 20px;
+}
+
+/* 投稿影 */
+.card-shadow {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
 
 /* 投稿画像 */
 .card-img-top {
