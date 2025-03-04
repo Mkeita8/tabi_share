@@ -1,6 +1,6 @@
 class BoardsController < ApplicationController
   before_action :set_user, only: %i[edit update destroy]
-  skip_before_action :require_login, only: %i[show]
+  skip_before_action :require_login, only: %i[show index hashtag]
   def new
     @board = Board.new
   end

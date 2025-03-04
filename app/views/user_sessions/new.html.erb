@@ -2,8 +2,8 @@
   <div class="images-section pt-3 d-none d-lg-block"></div>
 
   <div class="login-section pt-5">
-    <div class="card text-center pt-5" style="width: 23rem;">
-      <h1>Login</h1>
+    <div class="card text-center pt-5">
+      <h1 class="prompt-thin">LOGIN</h1>
       <div class="card-body">
         <%= form_with url: login_path, data: {turbo: false} do |f| %>
           <div class="mb-3 mt-4">
@@ -14,7 +14,7 @@
             <%= f.password_field :password, class: "form-control", placeholder: "パスワード" %>
           </div>
 
-          <%= f.submit "ログイン", class: "btn btn-primary w-100" %>
+          <%= f.submit "Login", class: "prompt-thin-2 btn btn-dark w-100" %>
         <% end %>
 
         <% if notice %>
@@ -23,7 +23,7 @@
 
           <p class="alert"><%= alert %></p>
         <% end %>
-        
+
         <%# <%= link_to "パスワードを忘れた？", new_password_reset_path, class: "fs-6 d-block my-4 text-decoration-none" %>
       </div>
     </div>
@@ -31,7 +31,7 @@
     <div class="card text-center py-2 mt-3" style="width: 23rem;">
       <div class="card-text">
         アカウントを持っていない？
-        <%= link_to "Sign up", new_user_path, class: "fs-6 my-4 text-decoration-none text-info" %>
+        <%= link_to "Sign up", new_user_path, class: "prompt-thin-4 text-secondary" %>
       </div>
     </div>
   </div>

@@ -1,18 +1,21 @@
 <header class="sticky-top header mb-4">
-  <nav class="navbar navbar-expand-lg bg-white">
+  <nav class="navbar navbar-expand-lg">
     <%= link_to root_path, class: "navbar-brand" do %>
-      <%= image_tag asset_path("logo.png") %>
+      <%= image_tag asset_path("tabishare.png"), class: "ms-4" %>
     <% end %>
     <button class='navbar-toggler' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-='Toggle navigation'>
       <span class="navbar-toggler-icon"></span>
     </button>
+    <div class="col-lg-7 offset-lg-1">
+      <%= render "shared/search_form", q: @q, url: boards_path %>
+    </div>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto main-nav align-items-center">
-        <li class="nav-item ms-5">
-          <%= link_to "Sign up", new_user_path, class: "nav-link text-black" %>
+        <li class="nav-item">
+          <%= link_to "SIGN UP", new_user_path, class: "prompt-thin-3 btn btn-dark text-white btn-sm me-2" %>
         </li>
         <li class="nav-item">
-          <%= link_to "Login", login_path, class: "nav-link text-black" %>
+          <%= link_to "LOGIN", login_path, class: "prompt-thin-3 btn btn-dark text-white btn-sm me-3" %>
         </li>
       </ul>
     </div>
