@@ -22,4 +22,5 @@ Rails.application.routes.draw do
   get "maps/index"
   get "terms", to: "static_pages#terms"
   get "privacy", to: "static_pages#privacy"
+  get "inquiry", to: "static_pages#inquiry"
 end
