@@ -87,7 +87,7 @@ group :test do
   gem "selenium-webdriver"
 end
 
-group :productio do
+group :production do
   # Amazons3
   gem "fog-aws"
 end
