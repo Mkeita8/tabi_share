@@ -18,7 +18,7 @@
         </tr>
         <tr>
         <th scope="row"><%= User.human_attribute_name(:プロフィール写真) %></th>
-        <td><%= image_tag url_for(current_user.avatar_url), class: 'rounded-circle', size: '80x80' %></td>
+        <td><%= image_tag current_user.avatar_url, class: 'rounded-circle', size: '80x80' %></td>
       </tr>
       </table>
       <div class="d-flex justify-content-center align-items-center mb-3">
