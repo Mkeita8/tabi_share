@@ -20,7 +20,7 @@
 ### ログイン前の場合
 | トップ画面 | サインアップ画面 |
 |:-----------:|:------------:|
-| <img src="https://i.gyazo.com/8f02065da8ec5f2dae2f3cd00e2e0626.gif" width="380"> | <img src="https://gyazo.com/7cddcf0a3c6f2605ec27d1c26572255e/raw" width="620"> |
+| <img src="https://i.gyazo.com/8f02065da8ec5f2dae2f3cd00e2e0626.gif" width="400"> | <img src="https://gyazo.com/7cddcf0a3c6f2605ec27d1c26572255e/raw" width="600"> |
 | 投稿一覧やサービス概要が表示されています | お名前、ニックネーム、メールアドレス、パスワードでサインアップできます。 |
 
 </br>
