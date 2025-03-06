@@ -46,9 +46,10 @@
 
 </br>
 
+### ログイン後の場合
 | 投稿作成・編集 | プロフィール編集 |
 |:-----------:|:------------:|
-| <img src="https://i.gyazo.com/429b64010723e10570103e4184804d01.gif" width="200"> | <img src="https://gyazo.com/db87a27859426496efc04080fdbedb5b/raw" width="800"> |
+| <img src="https://i.gyazo.com/429b64010723e10570103e4184804d01.gif" width="400"> | <img src="https://gyazo.com/db87a27859426496efc04080fdbedb5b/raw" width="600"> |
 | タイトル、観光サイトURL、ハッシュタグ、住所、写真を投稿、編集できます。 | お名前、ニックネーム、メールアドレス、アイコン写真を編集できます。 |
 
 </br>
