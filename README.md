@@ -41,7 +41,7 @@
 
 | LINE共有 |
 |:-----------:|
-| <img src="https://gyazo.com/e195be061a6138fbb810f39d5bd7b9b5.gif" width="500"> | 
+| <img src="https://gyazo.com/e195be061a6138fbb810f39d5bd7b9b5.gif" width="480"> | 
 | 共有したい投稿を共有できます。 | 
 
 </br>
