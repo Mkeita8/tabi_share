@@ -34,7 +34,7 @@
 
 | 検索機能 | ハッシュタグ機能 |
 |:-----------:|:------------:|
-| <img src="https://i.gyazo.com/39ab9ddb2a3a63048da37825c8903a60.gif" width="385"> | <img src="https://i.gyazo.com/126403b86fbdc307f0ea5f8ed2a81e58.gif" width="385"> |
+| [![Image from Gyazo](https://i.gyazo.com/603312f8f561ec540bfac1dc366aec18.gif)](https://gyazo.com/603312f8f561ec540bfac1dc366aec18) | <img src="https://i.gyazo.com/126403b86fbdc307f0ea5f8ed2a81e58.gif" width="385"> |
 | 検索したいワードで検索できます。 | 投稿のハッシュタグを押すとハッシュダグ一覧が表示されます。 |
 
 </br>
