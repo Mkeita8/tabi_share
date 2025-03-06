@@ -20,7 +20,7 @@
 ### ログイン前の場合
 | トップ画面 | サインアップ画面 |
 |:-----------:|:------------:|
-| <img src="https://i.gyazo.com/8f02065da8ec5f2dae2f3cd00e2e0626.gif" width="390"> | <img src="https://gyazo.com/7cddcf0a3c6f2605ec27d1c26572255e/raw" width="610"> |
+| <img src="https://i.gyazo.com/8f02065da8ec5f2dae2f3cd00e2e0626.gif" width="385"> | <img src="https://gyazo.com/7cddcf0a3c6f2605ec27d1c26572255e/raw" width="615"> |
 | 投稿一覧やサービス概要が表示されています | お名前、ニックネーム、メールアドレス、パスワードでサインアップできます。 |
 
 </br>
@@ -41,7 +41,7 @@
 
 | LINE共有 |
 |:-----------:|
-| <img src="https://gyazo.com/e195be061a6138fbb810f39d5bd7b9b5.gif" width="480"> | 
+| <img src="https://gyazo.com/e195be061a6138fbb810f39d5bd7b9b5.gif" width="385"> | 
 | 共有したい投稿を共有できます。 | 
 
 </br>
