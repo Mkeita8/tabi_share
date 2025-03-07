@@ -37,7 +37,7 @@
 | 検索したいワードで検索できます。 | 投稿のハッシュタグを押すとハッシュダグ一覧が表示されます。 |
 
 </br>
-https://gyazo.com/edec90815a54c72dc49b6f323d3908f7
+
 | LINE共有 | ※ブックマーク一覧 |
 |:-----------:|:------------:|
 | <img src="https://gyazo.com/e195be061a6138fbb810f39d5bd7b9b5.gif" width="385"> | <img src="https://gyazo.com/e195be061a6138fbb810f39d5bd7b9b5.gif" width="385"> |
