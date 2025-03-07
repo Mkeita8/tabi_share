@@ -40,7 +40,7 @@
 
 | LINE共有 | ※ブックマーク一覧 |
 |:-----------:|:------------:|
-| <img src="https://gyazo.com/e195be061a6138fbb810f39d5bd7b9b5.gif" width="385"> | <img src="https://gyazo.com/362a603534c31c68cd2279d09660af67/raw" width="500"> |
+| <img src="https://gyazo.com/e195be061a6138fbb810f39d5bd7b9b5.gif" width="385"> | [![Image from Gyazo](https://i.gyazo.com/59ee49fe4196e0d3909ce9d670df7d46.gif)](https://gyazo.com/59ee49fe4196e0d3909ce9d670df7d46) |
 | 共有したい投稿を共有できます。 | 気に入った投稿をブックマークしブックマーク一覧で確認できます。 |
 
 </br>
