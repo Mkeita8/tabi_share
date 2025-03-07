@@ -37,10 +37,10 @@
 | 検索したいワードで検索できます。 | 投稿のハッシュタグを押すとハッシュダグ一覧が表示されます。 |
 
 </br>
-
+https://gyazo.com/edec90815a54c72dc49b6f323d3908f7
 | LINE共有 | ※ブックマーク一覧 |
 |:-----------:|:------------:|
-| <img src="https://gyazo.com/e195be061a6138fbb810f39d5bd7b9b5.gif" width="385"> | [![Image from Gyazo](https://i.gyazo.com/59ee49fe4196e0d3909ce9d670df7d46.gif)](https://gyazo.com/59ee49fe4196e0d3909ce9d670df7d46) |
+| <img src="https://gyazo.com/e195be061a6138fbb810f39d5bd7b9b5.gif" width="385"> | <img src="https://gyazo.com/e195be061a6138fbb810f39d5bd7b9b5.gif" width="385"> |
 | 共有したい投稿を共有できます。 | 気に入った投稿をブックマークしブックマーク一覧で確認できます。 |
 
 </br>
