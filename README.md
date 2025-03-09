@@ -56,7 +56,7 @@
 
 | ブックマーク |
 |:-----------:|
-| <img src="https://gyazo.com/fc5722bd9aac028547af4f8e538bc494.gif" width="500"> |
+| <img src="https://gyazo.com/e195be061a6138fbb810f39d5bd7b9b5.gif" width="500"> |
 | 気に入った投稿をブックマークしブックマーク一覧で確認できます。  |
 
 ## ■　サービス利用イメージ
