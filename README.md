@@ -38,9 +38,9 @@
 
 </br>
 
-| LINE共有 | ※ブックマーク一覧 |
+| LINE共有 | ※ブックマーク機能 |
 |:-----------:|:------------:|
-| <img src="https://gyazo.com/e195be061a6138fbb810f39d5bd7b9b5.gif" width="385"> | <img src="https://gyazo.com/79a559465bab9f092dafa9827d480e05/raw" width="385"> |
+| <img src="https://gyazo.com/e195be061a6138fbb810f39d5bd7b9b5.gif" width="385"> | <img src="https://i.gyazo.com/edec90815a54c72dc49b6f323d3908f7.gif" width="385"> |
 | 共有したい投稿を共有できます。 | 気に入った投稿をブックマークしブックマーク一覧で確認できます。 |
 
 </br>
@@ -49,14 +49,6 @@
 |:-----------:|:------------:|
 | <img src="https://i.gyazo.com/429b64010723e10570103e4184804d01.gif" width="385"> | <img src="https://gyazo.com/db87a27859426496efc04080fdbedb5b/raw" width="615"> |
 | 観光地の詳細を記載して投稿できます。 | お名前、ニックネーム、メールアドレス、アイコン写真を編集できます。 |
-
-</br>
-
-| ブックマーク |
-|:-----------:|
-| <img src="https://i.gyazo.com/edec90815a54c72dc49b6f323d3908f7.gif" width="385"> |
-| 気に入った投稿をブックマークしブックマーク一覧で確認できます。 |
-
 
 ## サービス利用イメージ
 ### ログイン前の場合
