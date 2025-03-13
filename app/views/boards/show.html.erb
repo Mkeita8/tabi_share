@@ -20,12 +20,12 @@
           </div>
           <div class="row mt-3">
             <div class="col-md-8">
-              <%= image_tag @board.board_image_url, class: "card-img-top-show", style: "width:100%; height:600px; object-fit: cover;" %>
+              <%= image_tag @board.board_image_url, class: "card-img-top-show"%>
             </div>
             <div class="col-md-4">
               <h5 class="bi bi-geo-alt-fill">住所</h5>
               <p><%= @board.address %></p>
-              <div id="map" style="width:100%; height:530px;"></div>
+              <div id="map" style="width:100%; height:370px;"></div>
             </div>
           </div>
           <% if @board.official_link.present? %>
