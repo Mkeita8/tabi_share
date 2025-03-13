@@ -5,7 +5,7 @@
       <div id="board-id-<%= board.id %>">
         <div class="card card-shadow">
           <%= link_to board_path(board) do %>
-            <%= image_tag board.board_image_url, class: "card-img-top", style: "width:100%; height:400px; object-fit: cover;" %>
+            <%= image_tag board.board_image_url, class: "card-img-top"%>
           <% end %>
           <div class="card-body">
             <div class="d-flex">
