@@ -43,4 +43,8 @@ class Board < ApplicationRecord
       board.hashtags << tag
     end
   end
+
+  scope :same_prefecture_boards, -> (prefecture, id) {
+    where('address LIKE ?', "%#{prefecture}%").where.not(id: id).limit(5)
+  }
 end
