@@ -23,6 +23,8 @@ class BoardsController < ApplicationController
 
   def show 
     @board = Board.find(params[:id])
+    @prefecture = @board.address.sub(/^〒\d{3}-\d{4} /, '')[/\A(北海道|東京都|大阪府|京都府|.+?県)/]
+    @prefecture_boards = Board.where('address LIKE ?', "%#{@prefecture}%").where.not(id: @board.id).limit(3).order(created_at: :desc)
   end
 
   def edit
